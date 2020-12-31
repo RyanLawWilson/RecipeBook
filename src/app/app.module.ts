@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from 'src/header/header.component';
 import { ShoppingListEditComponent } from 'src/shopping-list/shopping-list-edit/shopping-list-edit.component';
 import { ShoppingListComponent } from 'src/shopping-list/shopping-list/shopping-list.component';
+import { RecipeListComponent } from 'src/recipe-book/recipe-list/recipe-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ShoppingListComponent,
-    ShoppingListEditComponent
+    ShoppingListEditComponent,
+    RecipeListComponent
   ],
   imports: [
     BrowserModule
