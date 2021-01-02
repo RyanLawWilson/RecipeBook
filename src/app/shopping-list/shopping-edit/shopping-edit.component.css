@@ -1,15 +1,15 @@
 .edit-container {
     --dec-width: 20px;
-    --dec-height: 120%;
+    --dec-height: 100%;
     --dec-arm-width: 30px;
     --dec-arm-height: 6px;
     --transition-duration: 0.15s;
 
     background-color: darkslateblue;
-    border-radius: 25px;
+    border-radius: 5px;
     position: relative;
     display: block;
-    margin: 8px 5px;
+    margin: 10px 5px;
     padding: 5px calc(var(--dec-width));
     border: 1px solid gold;
     font-weight: bold;
@@ -26,7 +26,7 @@
     position: absolute;
     background-color: goldenrod;
     width: var(--dec-width);
-    height: var(--dec-height);
+    height: calc(var(--dec-height) + 8px);
     top: 50%;
     transform: translateY(-50%);
 
@@ -48,13 +48,13 @@
 .edit-decoration--left {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    left: -8px;
+    left: -11px;
 }
 
 .edit-decoration--right {
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    right: -8px;
+    right: -11px;
 }
 
 .edit-decoration--left::before, .edit-decoration--left::after, .edit-decoration--right::before, .edit-decoration--right::after {
