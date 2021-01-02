@@ -1,4 +1,9 @@
 .edit-container {
+    --dec-width: 20px;
+    --dec-height: 110%;
+    --dec-arm-width: 25px;
+    --dec-arm-height: 5px;
+
     background-color: darkslateblue;
     border-radius: 20px;
     position: relative;
@@ -6,49 +11,46 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     margin: 7px 0 7px 3px;
-    padding: 5px 25px;
+    padding: 5px var(--dec-width);
     border: 1px solid gold;
+    font-weight: bold;
 }
 
 .edit-decoration {
-    --dec-width: 25px;
-    --dec-height: 110%;
-    --dec-arm-width: 15px;
-
     position: absolute;
     background-color: goldenrod;
-    width: 25px;
-    height: 110%;
+    width: var(--dec-width);
+    height: var(--dec-height);
     top: 50%;
     transform: translateY(-50%);
 }
 
 .edit-decoration--left {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
     left: -3px;
 }
 
 .edit-decoration--right {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
     right: -3px;
 }
 
 .edit-decoration--left::before, .edit-decoration--left::after, .edit-decoration--right::before, .edit-decoration--right::after {
     content: "";
     position: absolute;
-    width: 15px;
-    height: 5px;
+    width: var(--dec-arm-width);
+    height: var(--dec-arm-height);
     background-color: goldenrod;
 }
 
 .edit-decoration--left::before, .edit-decoration--left::after {
-    left: 25px;
+    left: var(--dec-width);
 }
 
 .edit-decoration--right::before, .edit-decoration--right::after {
-    right: 25px;
+    right: var(--dec-width);
 }
 
 .edit-decoration--left::before, .edit-decoration--right::before {
